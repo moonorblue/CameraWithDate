@@ -21,6 +21,7 @@
 		FCDE7BFE18C0BCB00099B0B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDE7BE018C0BCAF0099B0B0 /* UIKit.framework */; };
 		FCDE7C0618C0BCB00099B0B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCDE7C0418C0BCB00099B0B0 /* InfoPlist.strings */; };
 		FCDE7C0818C0BCB00099B0B0 /* CameraWithDateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDE7C0718C0BCB00099B0B0 /* CameraWithDateTests.m */; };
+		FCE91F5918C19BDE0037B5BD /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE91F5818C19BDE0037B5BD /* OverlayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,10 @@
 		FCDE7C0318C0BCB00099B0B0 /* CameraWithDateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CameraWithDateTests-Info.plist"; sourceTree = "<group>"; };
 		FCDE7C0518C0BCB00099B0B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FCDE7C0718C0BCB00099B0B0 /* CameraWithDateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraWithDateTests.m; sourceTree = "<group>"; };
+		FCDE7C1118C0E7440099B0B0 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		FCDE7C1218C0E7440099B0B0 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		FCDE7C1318C0E7440099B0B0 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		FCE91F5818C19BDE0037B5BD /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,7 @@
 				FCDE7BEB18C0BCAF0099B0B0 /* AppDelegate.h */,
 				FCDE7BEC18C0BCAF0099B0B0 /* AppDelegate.m */,
 				FCDE7BEE18C0BCAF0099B0B0 /* Main.storyboard */,
+				FCE91F5818C19BDE0037B5BD /* OverlayView.xib */,
 				FCDE7BF118C0BCAF0099B0B0 /* ViewController.h */,
 				FCDE7BF218C0BCAF0099B0B0 /* ViewController.m */,
 				FCDE7BF418C0BCAF0099B0B0 /* Images.xcassets */,
@@ -211,6 +217,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = FCDE7BD018C0BCAF0099B0B0;
 			productRefGroup = FCDE7BDA18C0BCAF0099B0B0 /* Products */;
@@ -229,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCDE7BF518C0BCAF0099B0B0 /* Images.xcassets in Resources */,
+				FCE91F5918C19BDE0037B5BD /* OverlayView.xib in Resources */,
 				FCDE7BE718C0BCAF0099B0B0 /* InfoPlist.strings in Resources */,
 				FCDE7BF018C0BCAF0099B0B0 /* Main.storyboard in Resources */,
 			);
@@ -278,6 +286,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FCDE7BE618C0BCAF0099B0B0 /* en */,
+				FCDE7C1218C0E7440099B0B0 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -286,6 +295,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FCDE7BEF18C0BCAF0099B0B0 /* Base */,
+				FCDE7C1118C0E7440099B0B0 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -294,6 +304,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FCDE7C0518C0BCB00099B0B0 /* en */,
+				FCDE7C1318C0E7440099B0B0 /* zh-Hant */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -378,6 +389,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/KaeJer/Documents/iOS\\ Project/CameraWithDate/CameraWithDate",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CameraWithDate/CameraWithDate-Prefix.pch";
 				INFOPLIST_FILE = "CameraWithDate/CameraWithDate-Info.plist";
@@ -391,6 +406,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/KaeJer/Documents/iOS\\ Project/CameraWithDate/CameraWithDate",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CameraWithDate/CameraWithDate-Prefix.pch";
 				INFOPLIST_FILE = "CameraWithDate/CameraWithDate-Info.plist";
@@ -460,6 +479,7 @@
 				FCDE7C0D18C0BCB00099B0B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCDE7C0E18C0BCB00099B0B0 /* Build configuration list for PBXNativeTarget "CameraWithDateTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +488,7 @@
 				FCDE7C1018C0BCB00099B0B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
