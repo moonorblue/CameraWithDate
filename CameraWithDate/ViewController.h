@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Dropbox/Dropbox.h>
 @interface ViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     UIDatePicker *datepicker;
     NSString *date;
+    UIImagePickerController *imagePicker;
+    DBFilesystem *filesystem;
+    DBAccount *account;
+    DBPath *root;
+    
 }
 - (IBAction)click:(id)sender;
 - (IBAction)time:(id)sender;
@@ -20,7 +25,8 @@
 @property (strong, nonatomic) IBOutlet UIView *CamerOview;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *TimeButLebel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *CamerButLabel;
-- (IBAction)SelectTime:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *CameraBut;
+
 - (IBAction)TakePic:(id)sender;
 @property (weak, nonatomic) IBOutlet UIDatePicker *DatePicker;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolBar;

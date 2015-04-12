@@ -5,13 +5,16 @@
 //  Created by KaeJer Cho on 14/2/28.
 //  Copyright (c) 2014年 KaeJer Cho. All rights reserved.
 //
-
+#import <Dropbox/Dropbox.h>
 #import "AppDelegate.h"
 #import "ViewController.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    DBAccountManager *accountManager =
+    [[DBAccountManager alloc] initWithAppKey:@"b56v4u9p9a6gmg2" secret:@"9qcezekx2graeav"];
+    [DBAccountManager setSharedManager:accountManager];
     
     return YES;
 }
@@ -43,4 +46,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url
+  sourceApplication:(NSString *)source annotation:(id)annotation {
+    DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
+    if (account) {
+        NSLog(@"App linked successfully!");
+        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+        [user setValue:@"yes" forKey:@"isLogin"];
+        [user synchronize];
+        return YES;
+    }
+    return NO;
+}
 @end
